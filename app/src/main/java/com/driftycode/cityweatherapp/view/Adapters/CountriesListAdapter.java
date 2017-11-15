@@ -1,4 +1,4 @@
-package com.driftycode.cityweatherapp.Adapters;
+package com.driftycode.cityweatherapp.view.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,9 +14,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.driftycode.cityweatherapp.R;
-import com.driftycode.cityweatherapp.models.WeatherModel;
+import com.driftycode.cityweatherapp.service.models.WeatherModel;
 import com.driftycode.cityweatherapp.utils.Constants;
-import com.driftycode.cityweatherapp.views.WeatherDetailActivity;
+import com.driftycode.cityweatherapp.view.ui.WeatherDetailActivity;
 
 /**
  * Created by nagendra on 12/11/17.
@@ -48,12 +48,15 @@ public class CountriesListAdapter extends RecyclerView.Adapter<CountriesListAdap
         loadImageFromUrlToImageView(holder.weatherIcon, citiesWeatherModels[position].getWeather()[0].getIcon());
     }
 
-    // Return the size of your data-set (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return citiesWeatherModels.length;
     }
 
+    /*
+     * Method: loadImageFromUrlToImageView
+     * Using Glide library - it will load the image from url and cache into imageview
+     */
     private void loadImageFromUrlToImageView(final ImageView imageView, String imageIconName) {
 
         if (imageIconName != null) {

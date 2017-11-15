@@ -4,4 +4,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_list_available">No List available.</string>
+    <string name="london_uk">London,UK</string>
+    <string name="temp_data_example">273.15</string>
 </resources>

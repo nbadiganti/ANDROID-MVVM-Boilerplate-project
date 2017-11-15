@@ -3,13 +3,13 @@ package com.driftycode.cityweatherapp.base;
 import android.app.Application;
 import android.content.Context;
 
-import com.driftycode.cityweatherapp.API.WeatherService;
+import com.driftycode.cityweatherapp.service.API.WeatherService;
 import com.driftycode.cityweatherapp.utils.Constants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import retrofit.RestAdapter;
-import retrofit.converter.GsonConverter;
+import retrofit2.GsonConverterFactory;
+import retrofit2.Retrofit;
 
 
 /**
@@ -18,23 +18,20 @@ import retrofit.converter.GsonConverter;
 
 public class WeatherApplication extends Application {
 
-    private RestAdapter adapter;
-    private WeatherService restInterface;
+    public static WeatherService initRestClient() {
+
+        // GSON converter factory for Retrofit response
+        Gson gson = new GsonBuilder()
+                .setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ")
+                .create();
+
+        Retrofit adapter = new Retrofit.Builder().baseUrl(Constants.BASE_URL).addConverterFactory(GsonConverterFactory.create(gson)).build();
+        return adapter.create(WeatherService.class);
+    }
 
     @Override
     public Context getApplicationContext() {
         return super.getApplicationContext();
     }
-
-    public WeatherService initRestClient() {
-        Gson gson = new GsonBuilder()
-                .setDateFormat("yyyy-MM-dd HH:mm:ss")
-                .create();
-
-        adapter = new RestAdapter.Builder().setEndpoint(Constants.BASE_URL).setConverter(new GsonConverter(gson)).build();
-        restInterface = adapter.create(WeatherService.class);
-        return restInterface;
-    }
-
 
 }

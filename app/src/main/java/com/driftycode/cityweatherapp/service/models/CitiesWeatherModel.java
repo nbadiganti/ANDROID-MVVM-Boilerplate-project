@@ -1,4 +1,4 @@
-package com.driftycode.cityweatherapp.models;
+package com.driftycode.cityweatherapp.service.models;
 
 /**
  * Created by nagendra on 13/11/17.

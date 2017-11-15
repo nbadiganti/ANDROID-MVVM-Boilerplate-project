@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:background="?attr/colorPrimary"
         android:gravity="bottom"
-        android:title="London,UK"
+        android:title="@string/london_uk"
         app:popupTheme="@style/ActionBarPopupThemeOverlay"
         app:subtitleTextAppearance="@style/ToolbarSubtitle"
         app:theme="@style/ThemeOverlay.AppCompat.Light"
@@ -29,9 +29,9 @@
             android:layout_alignRight="@+id/linearLayout"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="London,UK"
+            android:text="@string/london_uk"
             android:textColor="@android:color/white"
-            android:textSize="20dp" />
+            android:textSize="@dimen/dimem_20sp" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -50,8 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="273.15"
-            android:textSize="18dp" />
+            android:text="@string/temp_data_example"
+            android:textSize="@dimen/dimen_18sp" />
 
         <TextView
             android:id="@+id/tv_climate_description"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Clouds, broken clouds"
-            android:textSize="18dp" />
+            android:textSize="@dimen/dimen_18sp" />
 
         <View
             android:layout_width="fill_parent"
