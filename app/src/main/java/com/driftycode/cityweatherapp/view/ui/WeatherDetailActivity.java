@@ -87,7 +87,7 @@ public class WeatherDetailActivity extends BaseActivity {
             Log.d(TAG, "ImageURL" + imageUri);
 
             // To load the image dynamically on-fly
-            Glide.with(this).load(imageUri)
+            Glide.with(getApplicationContext()).load(imageUri)
                     .thumbnail(0.5f)
                     .crossFade()
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
