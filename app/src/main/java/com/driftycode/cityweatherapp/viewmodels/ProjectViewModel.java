@@ -1,6 +1,6 @@
 package com.driftycode.cityweatherapp.viewmodels;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 
 import com.driftycode.cityweatherapp.service.models.CitiesWeatherModel;
 import com.driftycode.cityweatherapp.service.models.WeatherModel;

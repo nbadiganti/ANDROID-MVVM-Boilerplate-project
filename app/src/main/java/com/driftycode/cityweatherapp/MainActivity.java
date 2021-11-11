@@ -9,14 +9,12 @@ import com.driftycode.cityweatherapp.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
     public Activity mActivity;
-    private String TAG = "MainActivity";
+    private final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         mActivity = this;
     }
 

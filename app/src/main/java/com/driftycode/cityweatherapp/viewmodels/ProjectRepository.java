@@ -1,8 +1,9 @@
 package com.driftycode.cityweatherapp.viewmodels;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.driftycode.cityweatherapp.base.WeatherApplication;
 import com.driftycode.cityweatherapp.service.API.WeatherService;
